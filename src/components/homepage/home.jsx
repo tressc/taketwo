@@ -11,7 +11,7 @@ class Home extends  React.Component {
     return (
       <div className="home-page">
         <Navigation />
-        Hello World
+        hello world
       </div>
     );
   }

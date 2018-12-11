@@ -11,18 +11,25 @@ class Navigation extends React.Component {
   render() {
     return (
       <Navbar fluid className="navigation">
+        <Navbar.Header>
+          <Link to="/" href="/" className="logo">
+            <span>t</span>
+          </Link>
+        </Navbar.Header>
+
+
         <Nav pullRight>
           <NavItem componentClass={Link} href="/" to="/">
-            Home
+            home
           </NavItem>
           <NavItem componentClass={Link} href="/projects" to="/projects">
-            Projects
+            projects
           </NavItem>
           <NavItem componentClass={Link} href="/blog" to="/blog">
-            Blog
+            blog
           </NavItem>
           <NavItem componentClass={Link} href="/about" to="/about">
-            About
+            about
           </NavItem>
         </Nav>
       </Navbar>

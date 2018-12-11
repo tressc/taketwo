@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../nav/navigation.jsx';
 
-class Home extends  React.Component {
+class Projects extends  React.Component {
   constructor() {
     super();
     this.state = {};
@@ -9,12 +9,12 @@ class Home extends  React.Component {
 
   render() {
     return (
-      <div className="home-page main-page">
+      <div className="projects main-page">
         <Navigation />
-        hello world
+        here are my projects
       </div>
     );
   }
 }
 
-export default Home;
+export default Projects;

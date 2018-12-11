@@ -1,0 +1,29 @@
+.entries {
+  display: flex;
+  justify-content: center;
+}
+
+.index {
+  height: 80vh;
+  width: 15%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.index div {
+  display: flex;
+  flex-direction: column;
+}
+
+.posts {
+  width: 65%;
+  height: 2000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.element {
+  margin-top: 500px;
+}

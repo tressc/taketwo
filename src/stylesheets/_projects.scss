@@ -6,21 +6,21 @@
 .projects .sub-nav ul {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 100px;
+  grid-gap: 50px;
 }
 
 .projects .sub-nav li {
   list-style-type: none;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   background-color: black;
   position: relative;
 }
 
 .project-img {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   transition: 2s;
 }
 

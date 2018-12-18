@@ -12,7 +12,13 @@ class Project extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+    // have a conditional check to see if we render the p5wrapper at all
+    var processing;
+    if (Number(this.props.id) % 2 === 0) { // this will be based on actual props
+      processing = sketch;
+    } else {
+      processing = paper;
+    }
     return (
       <div className="project main-page">
         <Navigation />
@@ -21,7 +27,7 @@ class Project extends React.Component {
               <Link to={`/projects`}>back to projects</Link>
             </div>
             <div className="entries">
-              <P5Wrapper sketch={ paper }></P5Wrapper>
+              <P5Wrapper sketch={ processing }></P5Wrapper>
             </div>
           </div>
       </div>

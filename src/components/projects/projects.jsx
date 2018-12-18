@@ -10,6 +10,21 @@ class Projects extends React.Component {
   }
 
   render() {
+    // these will be dynamically generated
+
+    // resize images proportionally
+    // either with a black background OR expand shortest edge to 100% and then
+    // center longer edge within frame (translate 50% overflow hidden etc...)
+
+    // let tempImg = new Image();
+    // tempImg.src = article.img_url;
+    // let imgClass;
+    //
+    // if (tempImg.height > tempImg.width) {
+    //   imgClass = "tall";
+    // } else {
+    //   imgClass = "wide";
+    // }
     return (
       <div className="projects main-page">
         <Navigation />

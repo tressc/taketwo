@@ -41,14 +41,14 @@ export default function sketch (p) {
     } else if (prevSorted) {
       finished = true;
       running = false;
-      for (var i = 0; i < prevSorted[0].length; i++) {
+      for (var j = 0; j < prevSorted[0].length; j++) {
         p.stroke(255);
-        p.line(i, p.height, i, p.height - prevSorted[0][i]);
+        p.line(j, p.height, j, p.height - prevSorted[0][j]);
       }
     } else {
-      for (var i = 0; i < lines.length; i++) {
+      for (var k = 0; k < lines.length; k++) {
         p.stroke(255);
-        p.line(i, p.height, i, p.height - lines[i]);
+        p.line(k, p.height, k, p.height - lines[k]);
       }
     }
   }

@@ -18,7 +18,7 @@
 }
 
 .posts {
-  width: 65%;
+  // width: 65%;
   height: 2000px;
   display: flex;
   flex-direction: column;
@@ -34,4 +34,15 @@
 
 .blog h2 {
   margin: 0;
+}
+
+.blog-link {
+  color: black;
+  transition: 2s;
+}
+
+.blog-link:hover {
+  color: white;
+  transition: 0s;
+  cursor: pointer;
 }

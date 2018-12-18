@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../nav/navigation.jsx';
 import * as Scroll from 'react-scroll';
-import P5Wrapper from 'react-p5-wrapper';
+import P5Wrapper from '../p5wrapper.jsx';
 import sketch from './sketch.js';
 // import Dec172018 from './posts/12172018.jsx';
 // import ReactHtmlParser from 'react-html-parser';
@@ -53,7 +53,7 @@ class Blog extends React.Component {
     })
     let posts = this.props.blogs.map((post, i) => {
       let className = "post";
-      let body = post.body
+      // let body = post.body
       if (i === 0) {
         className = "first-post"
       }

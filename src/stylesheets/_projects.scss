@@ -1,0 +1,43 @@
+.projects .sub-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.projects .sub-nav ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 100px;
+}
+
+.projects .sub-nav li {
+  list-style-type: none;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  position: relative;
+}
+
+.project-img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transition: 2s;
+}
+
+.project-img:hover {
+  opacity: .5;
+  transition: 0s;
+  cursor: pointer;
+}
+
+.project a {
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  transition: 2s;
+}
+
+.project a:hover {
+  color: white;
+  transition: 0s;
+}

@@ -11,7 +11,9 @@ class Projects extends  React.Component {
     return (
       <div className="projects main-page">
         <Navigation />
-        here are my projects
+          <div className="sub-nav">
+            here are my projects
+          </div>
       </div>
     );
   }

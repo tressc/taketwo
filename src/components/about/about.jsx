@@ -11,7 +11,9 @@ class About extends  React.Component {
     return (
       <div className="about main-page">
         <Navigation />
-        here's the about page
+        <div className="sub-nav">
+          here's the about page
+        </div>
       </div>
     );
   }

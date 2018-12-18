@@ -11,7 +11,9 @@ class Home extends  React.Component {
     return (
       <div className="home-page main-page">
         <Navigation />
-        hello world
+          <div className="sub-nav">
+            here's the home page
+          </div>
       </div>
     );
   }

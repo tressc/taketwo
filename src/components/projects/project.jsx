@@ -3,6 +3,7 @@ import Navigation from '../nav/navigation.jsx';
 import { Link } from 'react-router-dom';
 import P5Wrapper from '../p5wrapper.jsx';
 import paper from './paper.js';
+import sketch from './sketch2.js';
 
 class Project extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Project extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="project main-page">
         <Navigation />

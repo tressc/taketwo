@@ -1,12 +1,20 @@
 import React from 'react';
 import Navigation from '../nav/navigation.jsx';
-import placeholder from '../../assets/placeholder.png';
+// import tiles from '../../assets/placeholder.png';
+import mergesort from '../../assets/mergesort.png';
+import cylinder from '../../assets/cylinder.png';
+import boxes from '../../assets/boxes.png';
 import { Link } from 'react-router-dom';
 
 class Projects extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {};
+    this.images = {
+      mergesort: mergesort,
+      cylinder: cylinder,
+      boxes: boxes
+    };
   }
 
   render() {
@@ -25,51 +33,22 @@ class Projects extends React.Component {
     // } else {
     //   imgClass = "wide";
     // }
+    let projects;
+    projects = this.props.projects.map((project, i) => {
+      return (
+        <li key={i} className="project">
+          <Link to={`/projects/${project.id}`}>
+            <img alt={ project.id } className="project-img" src={ this.images[project.id] }></img>
+          </Link>
+        </li>
+      )
+    })
     return (
       <div className="projects main-page">
         <Navigation />
           <div className="sub-nav">
             <ul>
-              <li className="project">
-                <Link to={`/projects/1`}>
-                  <img alt="asdasd" className="project-img" src={ placeholder}></img>
-                </Link>
-              </li>
-              <li className="project">
-                <Link to={`/projects/2`}>
-                  <img alt="asdasd" className="project-img" src={ placeholder}></img>
-                </Link>
-              </li>
-              <li className="project">
-                <Link to={`/projects/3`}>
-                  <img alt="asdasd" className="project-img" src={ placeholder}></img>
-                </Link>
-              </li>
-              <li className="project">
-                <Link to={`/projects/4`}>
-                  <img alt="asdasd" className="project-img" src={ placeholder}></img>
-                </Link>
-              </li>
-              <li className="project">
-                <Link to={`/projects/5`}>
-                  <img alt="asdasd" className="project-img" src={ placeholder}></img>
-                </Link>
-              </li>
-              <li className="project">
-                <Link to={`/projects/6`}>
-                  <img alt="asdasd" className="project-img" src={ placeholder}></img>
-                </Link>
-              </li>
-              <li className="project">
-                <Link to={`/projects/7`}>
-                  <img alt="asdasd" className="project-img" src={ placeholder}></img>
-                </Link>
-              </li>
-              <li className="project">
-                <Link to={`/projects/8`}>
-                  <img alt="asdasd" className="project-img" src={ placeholder}></img>
-                </Link>
-              </li>
+              { projects }
             </ul>
           </div>
       </div>

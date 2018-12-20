@@ -1,7 +1,7 @@
 import React from 'react';
 import './stylesheets/App.sass';
 import Home from './components/homepage/home.jsx';
-import Projects from './components/projects/projects.jsx';
+import Projects from './components/projects/projects_container.js';
 import Project from './components/projects/project_container.js';
 import Blog from './components/blog/blog_container.js';
 import About from './components/about/about.jsx';

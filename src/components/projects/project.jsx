@@ -2,22 +2,28 @@ import React from 'react';
 import Navigation from '../nav/navigation.jsx';
 import { Link } from 'react-router-dom';
 import P5Wrapper from '../p5wrapper.jsx';
-import paper from './paper.js';
-import sketch from './sketch2.js';
+import tiles from './animations/tiles.js';
+import mergesort from './animations/mergesort.js';
+import cylinder from './animations/cylinders2.js';
+import boxes from './animations/boxes.js';
 
 class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.animations = {
+      tiles: tiles,
+      mergesort: mergesort,
+      cylinder: cylinder,
+      boxes: boxes,
+    }
   }
 
   render() {
     // have a conditional check to see if we render the p5wrapper at all
-    var processing;
-    if (Number(this.props.id) % 2 === 0) { // this will be based on actual props
-      processing = sketch;
-    } else {
-      processing = paper;
+    let animation = null;
+    if (this.animations[this.props.id]) { // this will be based on actual props
+      animation = <P5Wrapper sketch={ this.animations[this.props.id] }></P5Wrapper>;
     }
     return (
       <div className="project main-page">
@@ -27,7 +33,7 @@ class Project extends React.Component {
               <Link to={`/projects`}>back to projects</Link>
             </div>
             <div className="entries">
-              <P5Wrapper sketch={ processing }></P5Wrapper>
+              { animation }
             </div>
           </div>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../nav/navigation.jsx';
+import portrait from '../../assets/me.jpeg';
 
 class About extends  React.Component {
   constructor() {
@@ -12,7 +13,7 @@ class About extends  React.Component {
       <div className="about main-page">
         <Navigation />
         <div className="sub-nav">
-          here's the about page
+          <img src={ portrait } alt="me" className="portrait"></img>
         </div>
       </div>
     );

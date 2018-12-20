@@ -8,7 +8,7 @@ export default function sketch (p) {
   let fr = 40;
 
   p.setup = function() {
-    p.createCanvas(500, 200);
+    p.createCanvas(500, 500);
     // frameRate(fr);
     for (var i = 0; i < p.width; i++) {
       lines.push(p.random(p.height));
@@ -56,19 +56,18 @@ export default function sketch (p) {
   p.gMergeSort = function*(arr) {
   yield arr;
   var i = 1;
+
   while (i < arr.length) {
     var j = 0;
+
     while (j < arr.length) {
       var left = arr.slice(j, j + i);
       var right = arr.slice(j + i, j + i * 2);
       var merged = p.merge(left, right);
-      // arr = merged.concat(arr.slice(j + i * 2));
-      // yield arr;
       var beginning = arr.slice(0, j);
       var end = arr.slice(j + i * 2);
-      arr = beginning.concat(merged).concat(end);
-      // console.log(arr.slice(j + i * 2) || []);
 
+      arr = beginning.concat(merged).concat(end);
       yield [arr, j, j + i * 2];
       j += i * 2;
     }

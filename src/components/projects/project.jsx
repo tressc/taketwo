@@ -2,6 +2,9 @@ import React from 'react';
 import Navigation from '../nav/navigation.jsx';
 import { Link } from 'react-router-dom';
 import P5Wrapper from '../p5wrapper.jsx';
+import Highlight from 'react-highlight'
+
+
 import tiles from './animations/tiles.js';
 import mergesort from './animations/mergesort.js';
 import cylinder from './animations/cylinders2.js';
@@ -21,6 +24,14 @@ class Project extends React.Component {
 
   render() {
     // have a conditional check to see if we render the p5wrapper at all
+    let snippet = null;
+    if (this.props.snippet) {
+      snippet = (
+        <Highlight language='javascript'>
+            { this.props.snippet }
+        </Highlight>
+      )
+    }
     let animation = null;
     if (this.animations[this.props.id]) { // this will be based on actual props
       animation = <P5Wrapper sketch={ this.animations[this.props.id] }></P5Wrapper>;
@@ -34,6 +45,7 @@ class Project extends React.Component {
             </div>
             <div className="entries">
               { animation }
+              { snippet }
             </div>
           </div>
       </div>

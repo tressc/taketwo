@@ -16,7 +16,10 @@ export default function sketch (p) {
   }
 
   p.orbit = function () {
-    if (p.mouseIsPressed) {
+    var inBoundsX = p.mouseX < 500 && p.mouseX > 0;
+    var inBoundsY = p.mouseY < 500 && p.mouseY > 0;
+
+    if (p.mouseIsPressed && inBoundsX && inBoundsY) {
       currentRotationY = (p.mouseX - p.width / 2) / (p.width / 2);
       currentRotationX = (p.mouseY - p.height / 2) / (p.width / 2);
     }

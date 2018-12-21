@@ -36,6 +36,10 @@ class Project extends React.Component {
     if (this.animations[this.props.id]) { // this will be based on actual props
       animation = <P5Wrapper sketch={ this.animations[this.props.id] }></P5Wrapper>;
     }
+    let description = null;
+    if (this.props.description) {
+      description = <div className="proj-description">{ this.props.description }</div>
+    }
     return (
       <div className="project main-page">
         <Navigation />
@@ -45,6 +49,7 @@ class Project extends React.Component {
             </div>
             <div className="entries">
               { animation }
+              { description }
               { snippet }
             </div>
           </div>

@@ -20,7 +20,7 @@ const preloadedState = {
     {
       id: "mergesort",
       title: "Merge Sort",
-      description: "As I began to think about visualizing components of the computer go project I'm working on, I realized that a big roadblock would be animating the steps of a recursive function. I looked at examples of animated recursive sorting algorithms and found the following trick, which essentially amounts to performing the sort iteratively instead. Using javaScript's generator function allowed me to pause the algorithm in order to paint the array at different stages during the sort.",
+      description: "As I began to think about visualizing components of the computer go project I'm working on, I realized that a big roadblock would be animating the steps of a recursive function. I looked at examples of animated recursive sorting algorithms and found the following trick, which essentially amounts to performing the sort iteratively instead. Using javaScript's generator function allowed me to pause the algorithm in order to paint the array at different stages during the sort. (Click to restart animation.)",
       snippet: `
       p.gMergeSort = function*(arr) {
       yield arr;
@@ -53,7 +53,7 @@ const preloadedState = {
     {
       id: "cylinder",
       title: "Cylinder Drawing Reference",
-      description: "This is another drawing reference I created in order to better understand perspective. p5's native `orbitControl()` function wasn't cooperating with React.js, so I peeked at the native code and wrote my own version with some changes. Press 'L' to toggle a wireframe bounding box.",
+      description: "This is another drawing reference I created in order to better understand perspective. p5's `orbitControl()` function wasn't cooperating with React.js, so I peeked at the native code and wrote my own version with some changes. (Press 'L' to toggle a wireframe bounding box.)",
       snippet: `
         p.orbit = function () {
           var inBoundsX = p.mouseX < p.width && p.mouseX > 0;

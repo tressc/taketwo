@@ -3,7 +3,7 @@ const preloadedState = {
     {
       id: "tiles",
       title: "Tiles",
-      description: "some much longer string...",
+      description: "In this project I wanted to create the sensation of dragging your hand over a dynamic surface. p5's `directionalLight()` wasn't behaving correctly inside the React component, so I dropped that in favor of a normal material texture for the tiles. You can see the original code (with light and shadows) on my github.",
       links: {
         github: "www.github.com",
         live: "www.colintress.com"
@@ -11,17 +11,16 @@ const preloadedState = {
     },
     {
       id: "boxes",
-      title: "Tiles",
-      description: "some much longer string...",
+      title: "Cube Drawing Reference",
+      description: "I've been drawing much more recently, and have been surprised at the relative lack of free 3D references avaiable online. I decided to throw together some of my own in p5.js.",
       links: {
         github: "www.github.com",
-        live: "www.colintress.com"
       }
     },
     {
       id: "mergesort",
       title: "Merge Sort",
-      description: "some much longer string...",
+      description: "As I began to think about visualizing components of the computer go project I'm working on, I realized that a big roadblock would be animating the steps of a recursive function. I looked at examples of animated recursive sorting algorithms and found the following trick, which essentially amounts to performing the sort iteratively instead. Using javaScript's generator function allowed me to pause the algorithm in order to paint the array at different stages during the sort.",
       snippet: `
       p.gMergeSort = function*(arr) {
       yield arr;
@@ -53,8 +52,8 @@ const preloadedState = {
     },
     {
       id: "cylinder",
-      title: "Merge Sort",
-      description: "some much longer string...",
+      title: "Cylinder Drawing Reference",
+      description: "This is another drawing reference I created in order to better understand perspective. p5's native `orbitControl()` function wasn't cooperating with React.js, so I peeked at the native code and wrote my own version with some changes. Press 'L' to toggle a wireframe bounding box.",
       snippet: `
         p.orbit = function () {
           var inBoundsX = p.mouseX < p.width && p.mouseX > 0;

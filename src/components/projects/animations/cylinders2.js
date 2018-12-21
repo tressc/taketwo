@@ -26,7 +26,8 @@ export default function sketch (p) {
   }
 
   p.drawCylinders = function() {
-    p.rotateX(p.HALF_PI);
+    p.rotateX(p.HALF_PI / 4);
+    p.rotateZ(p.HALF_PI / 4);
     p.stroke('black');
     p.push()
     if (showLines) {

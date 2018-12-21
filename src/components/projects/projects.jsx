@@ -4,6 +4,7 @@ import Navigation from '../nav/navigation.jsx';
 import mergesort from '../../assets/mergesort.png';
 import cylinder from '../../assets/cylinder.png';
 import boxes from '../../assets/boxes.png';
+import tiles from '../../assets/tiles.png';
 import { Link } from 'react-router-dom';
 
 class Projects extends React.Component {
@@ -13,7 +14,8 @@ class Projects extends React.Component {
     this.images = {
       mergesort: mergesort,
       cylinder: cylinder,
-      boxes: boxes
+      boxes: boxes,
+      tiles: tiles
     };
   }
 

@@ -10,9 +10,9 @@ export default function paper (p) {
 
   p.draw = function() {
     p.background('black');
-    p.directionalLight(250, 250, 250, 0, 0, 100);
+    // p.directionalLight(250, 250, 250, 0, 0, 100);
     for (var i = 0; i < papers.length; i++) {
-      papers[i].display();
+      papers[i].display(i);
     }
   }
 
@@ -50,7 +50,7 @@ export default function paper (p) {
       }
     };
 
-    this.display = function() {
+    this.display = function(i) {
       if (Math.abs(this.diffX - this.incrementX) < 0.1) {
         this.increment = this.diffX;
       }

@@ -1,5 +1,95 @@
+.about .sub-nav {
+  display: flex;
+}
+
+.about .sub-nav * {
+  font-size: 25px;
+}
+
+.about .sub-nav .left {
+  width: 600px;
+  margin-right: 150px;
+}
+
+.about .sub-nav div,{
+  color: white;
+}
+
+.about .sub-nav a {
+  font-size: 30px;
+}
+
+.left .row-two, .left .row-three {
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.row-one {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.right .row-one {
+  justify-content: center;
+}
+
 .portrait {
-  mask-image: radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
-  // border-radius: 50%;
+  // mask-image: radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+  border-radius: 50%;
   transform: scaleX(-1);
+}
+
+.row-two {
+  height: 300px;
+  margin-bottom: 100px;
+}
+
+.list {
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  margin-bottom: 30px;
+}
+
+.contact {
+  padding: 0;
+}
+
+.contact li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.red {
+  color: red;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.green {
+  color: limegreen;
+}
+
+.blue {
+  color: skyblue;
+}
+
+.violet {
+  color: violet;
 }

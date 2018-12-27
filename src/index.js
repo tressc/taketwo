@@ -9,14 +9,18 @@ import * as serviceWorker from './serviceWorker';
 import Root from './components/root.jsx';
 import configureStore from './store/store.js';
 import preloadedState from './store/preloaded_state.js';
+import ReactGA from 'react-ga';
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  ReactGA.initialize('UA-131463962-1');
+  ReactGA.pageview('/projects');
+
+
   const root = document.getElementById('root');
   const store = configureStore(preloadedState);
   ReactDOM.render(<Root store={ store } />, root);
 });
-
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 

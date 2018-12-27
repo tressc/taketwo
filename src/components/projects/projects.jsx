@@ -5,6 +5,9 @@ import mergesort from '../../assets/mergesort.png';
 import cylinder from '../../assets/cylinder.png';
 import boxes from '../../assets/boxes.png';
 import tiles from '../../assets/tiles.png';
+import redroute from '../../assets/redroute.png';
+import demo from '../../assets/demozoom.png';
+import portal from '../../assets/portal.png';
 import { Link } from 'react-router-dom';
 
 class Projects extends React.Component {
@@ -15,7 +18,10 @@ class Projects extends React.Component {
       mergesort: mergesort,
       cylinder: cylinder,
       boxes: boxes,
-      tiles: tiles
+      tiles: tiles,
+      redroute: redroute,
+      demo: demo,
+      portal: portal
     };
   }
 

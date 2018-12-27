@@ -10,6 +10,10 @@ import mergesort from './animations/mergesort.js';
 import cylinder from './animations/cylinders2.js';
 import boxes from './animations/boxes.js';
 
+import demo from '../../assets/demo.png';
+import homepage from '../../assets/homepage.png';
+import portal from '../../assets/portalfull.png';
+
 class Project extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +23,12 @@ class Project extends React.Component {
       mergesort: mergesort,
       cylinder: cylinder,
       boxes: boxes,
-    }
+    };
+    this.staticImages = {
+      demo: demo,
+      redroute: homepage,
+      portal: portal
+    };
   }
 
   render() {
@@ -33,11 +42,15 @@ class Project extends React.Component {
       )
     }
     let animation = null;
-    if (this.animations[this.props.id]) { // this will be based on actual props
+    if (this.animations[this.props.id] !== undefined) { // this will be based on actual props
       animation = <P5Wrapper sketch={ this.animations[this.props.id] }></P5Wrapper>;
     }
+    let staticImage = null;
+    if (this.staticImages[this.props.id] !== undefined) { // this will be based on actual props
+      staticImage = <img  className="static-image" alt={ this.staticImages[this.props.id] } src={ this.staticImages[this.props.id] }></img>;
+    }
     let description = null;
-    if (this.props.description) {
+    if (this.props.description !== undefined) {
       description = <div className="proj-description">{ this.props.description }</div>
     }
     return (
@@ -49,6 +62,7 @@ class Project extends React.Component {
             </div>
             <div className="entries">
               { animation }
+              { staticImage }
               { description }
               { snippet }
             </div>

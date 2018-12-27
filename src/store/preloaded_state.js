@@ -1,8 +1,18 @@
 const preloadedState = {
   projects: [
     {
+      id: "redroute",
+      title: "RedRoute Website",
+      technologies: "React.js, Redux, Firebase, Bootstrap",
+      description: "I completely rebuilt RedRoute's website, working directly with their designer to create a fast, mobile-responsive experience. Form data is saved to a no-SQL database on Firebase, which also hosts the website itself.",
+      links: {
+        live: "https://redroute.com"
+      }
+    },
+    {
       id: "tiles",
       title: "Tiles",
+      technologies: 'p5.js',
       description: "In this project I wanted to create the sensation of dragging your hand over a dynamic surface. p5's `directionalLight()` wasn't behaving correctly inside the React component, so I dropped that in favor of a normal material texture for the tiles. You can see the original code (with light and shadows) on my github.",
       links: {
         github: "www.github.com",
@@ -10,16 +20,30 @@ const preloadedState = {
       }
     },
     {
+      id: "demo",
+      title: "RedRoute Call Demo",
+      technologies: "Twilio, React.js, Redux, Firebase, Bootstrap",
+      description: "This demo page allows prospective clients to try out RedRoute's Interactive Voice Response system. Using Twilio's API, users can schedule a taxi ride, have the system call their phone's to simulate a no-show, and test other features.",
+    },
+    {
       id: "boxes",
       title: "Cube Drawing Reference",
+      technologies: 'p5.js',
       description: "I've been drawing much more recently, and have been surprised at the relative lack of free 3D references avaiable online. I decided to throw together some of my own in p5.js.",
       links: {
         github: "www.github.com",
       }
     },
     {
+      id: "portal",
+      title: "RedRoute Portal",
+      technologies: "Flask, Handlebars.js, Bootstrap",
+      description: "RedRoute's client portal allows users to view real-time data about their company, and make changes to how calls are handled by their IVR system.",
+    },
+    {
       id: "mergesort",
       title: "Merge Sort",
+      technologies: 'p5.js',
       description: "As I began to think about visualizing components of the computer go project I'm working on, I realized that a big roadblock would be animating the steps of a recursive function. I looked at examples of animated recursive sorting algorithms and found the following trick, which essentially amounts to performing the sort iteratively instead. Using javaScript's generator function allowed me to pause the algorithm in order to paint the array at different stages during the sort. (Click to restart animation.)",
       snippet: `
       p.gMergeSort = function*(arr) {
@@ -53,6 +77,7 @@ const preloadedState = {
     {
       id: "cylinder",
       title: "Cylinder Drawing Reference",
+      technologies: 'p5.js',
       description: "This is another drawing reference I created in order to better understand perspective. p5's `orbitControl()` function wasn't cooperating with React.js, so I peeked at the native code and wrote my own version with some changes. (Press 'L' to toggle a wireframe bounding box.)",
       snippet: `
         p.orbit = function () {

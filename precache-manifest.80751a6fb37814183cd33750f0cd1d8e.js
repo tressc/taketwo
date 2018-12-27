@@ -4,16 +4,20 @@ self.__precacheManifest = [
     "url": "/static/media/demozoom.2dbb9b18.png"
   },
   {
-    "revision": "0749f56c3436d782151c",
-    "url": "/static/css/main.30e2caca.chunk.css"
+    "revision": "27cf11523cfac669dfb1",
+    "url": "/static/css/main.a1488fa5.chunk.css"
   },
   {
-    "revision": "69d5dc51138c9453cd98",
-    "url": "/static/js/1.69d5dc51.chunk.js"
+    "revision": "13c85fdfda988bb7667d",
+    "url": "/static/js/1.13c85fdf.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
     "url": "/static/js/runtime~main.229c360f.js"
+  },
+  {
+    "revision": "02293b6be0481f457083b6fb2ec35714",
+    "url": "/static/media/dungeon.02293b6b.png"
   },
   {
     "revision": "b5bfc6205a4fe0a0672998f008540184",
@@ -32,12 +36,16 @@ self.__precacheManifest = [
     "url": "/static/media/redroute.c3aaad70.png"
   },
   {
-    "revision": "0749f56c3436d782151c",
-    "url": "/static/js/main.0749f56c.chunk.js"
+    "revision": "27cf11523cfac669dfb1",
+    "url": "/static/js/main.27cf1152.chunk.js"
   },
   {
     "revision": "c014a8b3966d621906aeb48bfb6c60e2",
     "url": "/static/media/portal.c014a8b3.png"
+  },
+  {
+    "revision": "08a23d7f5e8cc8538743782ff9623176",
+    "url": "/static/media/pictathumb.08a23d7f.png"
   },
   {
     "revision": "bb6f425f4b8afbfa1af292dbd3fcaa54",
@@ -52,6 +60,10 @@ self.__precacheManifest = [
     "url": "/static/media/portalfull.5b02d833.png"
   },
   {
+    "revision": "62818ab45d97c9ac806e48e3291f124b",
+    "url": "/static/media/picta.62818ab4.png"
+  },
+  {
     "revision": "04182a33cbe8ff716c1241b3efa12f20",
     "url": "/static/media/me.04182a33.jpeg"
   },
@@ -60,7 +72,7 @@ self.__precacheManifest = [
     "url": "/static/media/resume.ec0781f9.pdf"
   },
   {
-    "revision": "42133104ebe98bba1fe44e2cc95c04aa",
+    "revision": "a5d00c822b0269a773b753c644a2bbd1",
     "url": "/index.html"
   }
 ];

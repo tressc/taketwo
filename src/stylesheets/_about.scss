@@ -17,6 +17,15 @@
 
 .about .sub-nav a {
   font-size: 30px;
+  color: black;
+  // font-weight: 600;
+  text-decoration: none;
+  transition: 2s;
+}
+
+.about .sub-nav a:hover {
+  color: white;
+  transition: 0s;
 }
 
 .left .row-two, .left .row-three {

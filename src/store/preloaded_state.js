@@ -1,24 +1,6 @@
 const preloadedState = {
   projects: [
     {
-      id: "pictagram",
-      title: "PictaGram",
-      technologies: "PostgreSQL, Ruby on Rails, React, Redux",
-      description: "This fullstack application emulates the core features of Instagram. Users can upload, edit, like and comment on their own photos and those of other users.",
-      links: {
-        live: "https://redroute.com"
-      }
-    },
-    {
-      id: "dungeon",
-      title: "Dungeon Deck",
-      technologies: "JavaScript, jQuery, CSS",
-      description: "I built this browser game while studying at App Academy. It's modeled after a phone game I used to play called Card Crawl.",
-      links: {
-        live: "https://redroute.com"
-      }
-    },
-    {
       id: "redroute",
       title: "RedRoute Website",
       technologies: "React.js, Redux, Firebase, Bootstrap",
@@ -31,10 +13,26 @@ const preloadedState = {
       id: "tiles",
       title: "Tiles",
       technologies: 'p5.js',
-      description: "In this project I wanted to create the sensation of dragging your hand over a dynamic surface. p5's `directionalLight()` wasn't behaving correctly inside the React component, so I dropped that in favor of a normal material texture for the tiles. You can see the original code (with light and shadows) on my github.",
+      description: "In this project I wanted to create the sensation of dragging your hand over a dynamic surface. p5's `directionalLight()` wasn't behaving correctly inside the React component, so I dropped that in favor of a normal material texture for the tiles. You can see the original code (with light and shadows) on my github."
+    },
+    {
+      id: "pictagram",
+      title: "PictaGram",
+      technologies: "PostgreSQL, Ruby on Rails, React, Redux",
+      description: "This fullstack application emulates the core features of Instagram. Users can upload, edit, like and comment on their own photos and those of other users.",
       links: {
-        github: "www.github.com",
-        live: "www.colintress.com"
+        live: "http://picta-gram.herokuapp.com",
+        github: "https://github.com/tressc/pictagram"
+      }
+    },
+    {
+      id: "dungeon",
+      title: "Dungeon Deck",
+      technologies: "JavaScript, jQuery, CSS",
+      description: "I built this browser game while studying at App Academy. It's modeled after a phone game I used to play called Card Crawl.",
+      links: {
+        live: "https://tressc.github.io/dungeondeck/",
+        github: "https://github.com/tressc/dungeondeck"
       }
     },
     {
@@ -48,9 +46,6 @@ const preloadedState = {
       title: "Cube Drawing Reference",
       technologies: 'p5.js',
       description: "I've been drawing much more recently, and have been surprised at the relative lack of free 3D references avaiable online. I decided to throw together some of my own in p5.js.",
-      links: {
-        github: "www.github.com",
-      }
     },
     {
       id: "portal",
@@ -87,10 +82,6 @@ const preloadedState = {
       }
     }
       `,
-      links: {
-        github: "www.github.com",
-        live: "www.colintress.com"
-      }
     },
     {
       id: "cylinder",
@@ -108,10 +99,6 @@ const preloadedState = {
           }
         }
       `,
-      links: {
-        github: "www.github.com",
-        live: "www.colintress.com"
-      }
     },
   ],
   blogs: [

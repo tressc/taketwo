@@ -69,6 +69,16 @@
   align-items: baseline;
 }
 
+.proj-links {
+  margin-top: 10px;
+  display: flex;
+  width: 50%;
+}
+
+.proj-links a {
+  margin-right: 20px;
+}
+
 .proj-title {
   font-size: 25px;
   font-weight: 600;

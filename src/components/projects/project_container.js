@@ -7,12 +7,14 @@ const msp = (state, ownProps) => {
   var title;
   var technologies;
   var description;
+  var links;
   for (var i = 0; i < state.projects.length; i++) {
     if (state.projects[i].id === id) {
       snippet = state.projects[i].snippet;
       description = state.projects[i].description;
       title = state.projects[i].title;
       technologies = state.projects[i].technologies;
+      links = state.projects[i].links;
     }
 
   }
@@ -21,7 +23,8 @@ const msp = (state, ownProps) => {
     snippet: snippet,
     description: description,
     technologies: technologies,
-    title: title
+    title: title,
+    links: links
   };
 };
 

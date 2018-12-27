@@ -65,6 +65,14 @@ class Project extends React.Component {
     if (this.props.technologies !== undefined) {
       technologies = <div className="proj-technologies">{ this.props.technologies }</div>
     }
+    let links = null;
+    if (this.props.links !== undefined) {
+      links = Object.keys(this.props.links).map((linktype, i) => {
+        return (
+        <a key={ i } href={ this.props.links[linktype] }>{ linktype }</a>
+        )
+      })
+    }
     return (
       <div className="project main-page">
         <Navigation />
@@ -81,6 +89,10 @@ class Project extends React.Component {
                 { technologies }
               </div>
 
+              <div className="proj-links">
+                { links }
+              </div>
+              
               { description }
               { snippet }
             </div>

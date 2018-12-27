@@ -12,10 +12,12 @@ export default function sketch (p) {
     p.stroke('black');
     p.strokeWeight(2);
     p.fill('#7AABAC');
+
     for (var i = 0; i < 5; i++) {
       p.push()
       p.translate(0, -200 + 100 * i);
       p.rotateX(p.HALF_PI / 2 - ((p.HALF_PI / 4) * i))
+
       for (var j = 0; j < 5; j++) {
         p.push();
         p.translate(-200 + 100 * j, 0);

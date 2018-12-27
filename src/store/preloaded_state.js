@@ -13,27 +13,71 @@ const preloadedState = {
       id: "tiles",
       title: "Tiles",
       technologies: 'p5.js',
-      description: "In this project I wanted to create the sensation of dragging your hand over a dynamic surface. p5's `directionalLight()` wasn't behaving correctly inside the React component, so I dropped that in favor of a normal material texture for the tiles. You can see the original code (with light and shadows) on my github."
+      description: "In this project I wanted to create the sensation of dragging your hand over a dynamic surface. p5's `directionalLight()` wasn't behaving correctly inside the React component, so I dropped that in favor of a normal material texture for the tiles. You can see the original code (with light and shadows) on my github.",
+      snippet: `
+      this.calculateDiffX = function() {
+        var x = p.mouseX;
+        var y = p.mouseY;
+        var inBoundsX = x > this.distanceLeft - 50 && x < this.distanceLeft + 50;
+        var inBoundsY = y > this.distanceTop - 50 && y < this.distanceTop + 50
+
+        if (inBoundsX && inBoundsY) {
+          this.diffX = (p.HALF_PI / 50) * (x - (this.distanceLeft));
+        } else {
+          this.diffX = 0;
+        }
+      };
+      `
     },
     {
       id: "pictagram",
-      title: "PictaGram",
+      title: "Pictagram",
       technologies: "PostgreSQL, Ruby on Rails, React, Redux",
-      description: "This fullstack application emulates the core features of Instagram. Users can upload, edit, like and comment on their own photos and those of other users.",
+      description: "This fullstack application emulates the core features of Instagram. Users can upload, edit, like and comment on their own photos and those of other users. I built my own authentication, which stores hashed passwords on the backend.",
       links: {
         live: "http://picta-gram.herokuapp.com",
         github: "https://github.com/tressc/pictagram"
-      }
+      },
+      ruby: true,
+      snippet: `
+      class User < ApplicationRecord
+
+        ...
+
+        def self.find_by_credentials(username, password)
+          user = User.find_by(username: username)
+          user && user.is_password?(password) ? user : nil
+        end
+
+        def is_password?(password)
+          BCrypt::Password.new(self.password_digest).is_password?(password)
+        end
+
+        ...
+      `
     },
     {
       id: "dungeon",
       title: "Dungeon Deck",
       technologies: "JavaScript, jQuery, CSS",
-      description: "I built this browser game while studying at App Academy. It's modeled after a phone game I used to play called Card Crawl.",
+      description: "I built this browser game while studying at App Academy. It's modeled after a phone game I used to play called Card Crawl. One challenge was how to teach new players the rules without inundating them with text to read. I approached this by highlighting valid moves whenever a user selects a card.",
       links: {
         live: "https://tressc.github.io/dungeondeck/",
         github: "https://github.com/tressc/dungeondeck"
-      }
+      },
+      snippet: `
+      let target = {};
+      for (let i = 0; i < 4; i++) {
+        target.location = {row: "dungeon", idx: i};
+        target.card = this.DungeonRow.spaces[i][0];
+        if (this.legalMove(target)) {
+          if (this.DungeonRow.spaces[i].length > 0) {
+            this.DungeonRow.spaces[i][0].validTarget = true;
+          }
+        }
+
+      ...
+      `
     },
     {
       id: "demo",
@@ -46,6 +90,29 @@ const preloadedState = {
       title: "Cube Drawing Reference",
       technologies: 'p5.js',
       description: "I've been drawing much more recently, and have been surprised at the relative lack of free 3D references avaiable online. I decided to throw together some of my own in p5.js.",
+      snippet: `
+      function drawCubes() {
+        p.stroke('black');
+        p.strokeWeight(2);
+        p.fill('#7AABAC');
+
+        for (var i = 0; i < 5; i++) {
+          p.push();
+          p.translate(0, -200 + 100 * i);
+          p.rotateX(p.HALF_PI / 2 - ((p.HALF_PI / 4) * i));
+
+          for (var j = 0; j < 5; j++) {
+            p.push();
+            p.translate(-200 + 100 * j, 0);
+            p.rotateY(-p.HALF_PI / 2 + ((p.HALF_PI / 4) * j));
+            p.strokeWeight(2);
+            p.box(50);
+            p.pop();
+          }
+          p.pop();
+        }
+      }
+      `
     },
     {
       id: "portal",

@@ -38,9 +38,13 @@ class Project extends React.Component {
   render() {
     // have a conditional check to see if we render the p5wrapper at all
     let snippet = null;
+    var language = 'javascript';
+    if (this.props.ruby === true) {
+      language = 'ruby';
+    }
     if (this.props.snippet) {
       snippet = (
-        <Highlight language='javascript'>
+        <Highlight className={ language }>
             { this.props.snippet }
         </Highlight>
       )

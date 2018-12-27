@@ -6,7 +6,35 @@ import resume from '../../assets/resume.pdf';
 class About extends  React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      colors: [
+        'red',
+        'orange',
+        'yellow',
+        'green',
+        'blue',
+        'violet',
+        'red'
+      ],
+      intervalId: null
+    };
+    this.rotateColors = this.rotateColors.bind(this);
+  }
+
+  rotateColors() {
+    var colors = this.state.colors;
+    colors.pop();
+    colors.unshift(colors[colors.length - 1]);
+    this.setState({ colors: colors });
+  }
+
+  componentDidMount() {
+    var interval = window.setInterval(this.rotateColors, 100);
+    this.setState({ intervalId: interval });
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.state.intervalId);
   }
 
   render() {
@@ -30,19 +58,10 @@ class About extends  React.Component {
       'Git',
       'Bootstrap',
     ];
-    let colors = [
-      'red',
-      'orange',
-      'yellow',
-      'green',
-      'blue',
-      'violet',
-      'red'
-    ];
     let technologies = techs.map((tech, i) => {
       let row = Math.floor(i / 5);
       let column = i % 5;
-      let color = colors[row + column];
+      let color = this.state.colors[row + column];
       return <li className={color}>{techs[i]}</li>;
     })
     return (

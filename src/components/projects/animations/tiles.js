@@ -32,7 +32,10 @@ export default function paper (p) {
       var x = p.mouseX;
       var y = p.mouseY;
 
-      if (x > this.distanceLeft - 50 && x < this.distanceLeft + 50 && y > this.distanceTop - 50 && y < this.distanceTop + 50 ) {
+      var inBoundsX = x > this.distanceLeft - 50 && x < this.distanceLeft + 50;
+      var inBoundsY = y > this.distanceTop - 50 && y < this.distanceTop + 50
+
+      if (inBoundsX && inBoundsY) {
         this.diffX = (p.HALF_PI / 50) * (x - (this.distanceLeft));
       } else {
         this.diffX = 0;
@@ -92,7 +95,7 @@ export default function paper (p) {
   p.mouseMoved = function() {
     for (var i = 0; i < papers.length; i++) {
       papers[i].calculateDiffX();
-      papers[i].calculateDiffY();
+      // papers[i].calculateDiffY();
     }
     //   if (mouseX > width || mouseX < 0 || mouseY > height || mouseY < 0) {
     //     return;

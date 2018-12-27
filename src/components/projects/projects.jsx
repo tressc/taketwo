@@ -49,7 +49,7 @@ class Projects extends React.Component {
     projects = this.props.projects.map((project, i) => {
       return (
         <li key={i} className="project">
-          <Link to={`/projects/${project.id}`}>
+          <Link to={`/${project.id}`}>
             <img alt={ project.id } className="project-img" src={ this.images[project.id] }></img>
           </Link>
         </li>

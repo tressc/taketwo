@@ -78,7 +78,7 @@ class Project extends React.Component {
         <Navigation />
           <div className="sub-nav">
             <div className="index">
-              <Link to={`/projects`}>back to projects</Link>
+              <Link to={`/`}>back to projects</Link>
             </div>
             <div className="entries">
               { animation }
@@ -92,7 +92,7 @@ class Project extends React.Component {
               <div className="proj-links">
                 { links }
               </div>
-              
+
               { description }
               { snippet }
             </div>

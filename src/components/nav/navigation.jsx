@@ -12,14 +12,14 @@ class Navigation extends React.Component {
     return (
       <Navbar fluid className="navigation">
         <Navbar.Header>
-          <Link to="/projects" href="/projects" className="logo">
+          <Link to="/" href="/" className="logo">
             <span>t</span>
           </Link>
         </Navbar.Header>
 
 
         <Nav pullRight>
-          <NavItem componentClass={Link} href="/projects" to="/projects">
+          <NavItem componentClass={Link} href="/" to="/">
             projects
           </NavItem>
           <NavItem componentClass={Link} href="/about" to="/about">

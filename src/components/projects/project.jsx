@@ -13,6 +13,8 @@ import boxes from './animations/boxes.js';
 import demo from '../../assets/demo.png';
 import homepage from '../../assets/homepage.png';
 import portal from '../../assets/portalfull.png';
+import pictagram from '../../assets/picta.png';
+import dungeon from '../../assets/dungeon.png';
 
 class Project extends React.Component {
   constructor(props) {
@@ -27,7 +29,9 @@ class Project extends React.Component {
     this.staticImages = {
       demo: demo,
       redroute: homepage,
-      portal: portal
+      portal: portal,
+      dungeon: dungeon,
+      pictagram: pictagram,
     };
   }
 
@@ -53,6 +57,14 @@ class Project extends React.Component {
     if (this.props.description !== undefined) {
       description = <div className="proj-description">{ this.props.description }</div>
     }
+    let title = null;
+    if (this.props.title !== undefined) {
+      title = <div className="proj-title">{ this.props.title }</div>
+    }
+    let technologies = null;
+    if (this.props.technologies !== undefined) {
+      technologies = <div className="proj-technologies">{ this.props.technologies }</div>
+    }
     return (
       <div className="project main-page">
         <Navigation />
@@ -63,6 +75,12 @@ class Project extends React.Component {
             <div className="entries">
               { animation }
               { staticImage }
+
+              <div className="title-techs">
+                { title }
+                { technologies }
+              </div>
+
               { description }
               { snippet }
             </div>

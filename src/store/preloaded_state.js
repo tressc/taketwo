@@ -1,6 +1,24 @@
 const preloadedState = {
   projects: [
     {
+      id: "pictagram",
+      title: "PictaGram",
+      technologies: "PostgreSQL, Ruby on Rails, React, Redux",
+      description: "This fullstack application emulates the core features of Instagram. Users can upload, edit, like and comment on their own photos and those of other users.",
+      links: {
+        live: "https://redroute.com"
+      }
+    },
+    {
+      id: "dungeon",
+      title: "Dungeon Deck",
+      technologies: "JavaScript, jQuery, CSS",
+      description: "I built this browser game while studying at App Academy. It's modeled after a phone game I used to play called Card Crawl.",
+      links: {
+        live: "https://redroute.com"
+      }
+    },
+    {
       id: "redroute",
       title: "RedRoute Website",
       technologies: "React.js, Redux, Firebase, Bootstrap",
@@ -23,7 +41,7 @@ const preloadedState = {
       id: "demo",
       title: "RedRoute Call Demo",
       technologies: "Twilio, React.js, Redux, Firebase, Bootstrap",
-      description: "This demo page allows prospective clients to try out RedRoute's Interactive Voice Response system. Using Twilio's API, users can schedule a taxi ride, have the system call their phone's to simulate a no-show, and test other features.",
+      description: "This demo page allows prospective clients to try out RedRoute's Interactive Voice Response system. Using Twilio's API, users can schedule a taxi ride, have the system call their phones to simulate a no-show, and test other features.",
     },
     {
       id: "boxes",
@@ -37,14 +55,14 @@ const preloadedState = {
     {
       id: "portal",
       title: "RedRoute Portal",
-      technologies: "Flask, Handlebars.js, Bootstrap",
+      technologies: "Flask, Handlebars.js, jQuery, Bootstrap",
       description: "RedRoute's client portal allows users to view real-time data about their company, and make changes to how calls are handled by their IVR system.",
     },
     {
       id: "mergesort",
       title: "Merge Sort",
       technologies: 'p5.js',
-      description: "As I began to think about visualizing components of the computer go project I'm working on, I realized that a big roadblock would be animating the steps of a recursive function. I looked at examples of animated recursive sorting algorithms and found the following trick, which essentially amounts to performing the sort iteratively instead. Using javaScript's generator function allowed me to pause the algorithm in order to paint the array at different stages during the sort. (Click to restart animation.)",
+      description: "As I began to think about visualizing components of the computer go project I'm working on, I realized that a big roadblock would be animating the steps of a recursive function. I looked at examples of animated recursive sorting algorithms and found the following trick, which essentially amounts to performing the sort iteratively instead. Using javaScript's generator function allowed me to 'pause' the algorithm in order to paint the array at different stages during the sort. (Click to restart animation.)",
       snippet: `
       p.gMergeSort = function*(arr) {
       yield arr;
@@ -64,7 +82,7 @@ const preloadedState = {
           yield [arr, j, j + i * 2];
           j += i * 2;
         }
-        fr *= 0.8;
+        fr *= 0.8; // reduce framerate for each successive pass
         i *= 2;
       }
     }

@@ -30,6 +30,10 @@
   color: #ebbbff;
 }
 
+pre .hljs-comment {
+  color: lightgray;
+}
+
 pre code {
   user-select: none;
   display: block;

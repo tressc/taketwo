@@ -8,6 +8,8 @@ import tiles from '../../assets/tiles.png';
 import redroute from '../../assets/redroute.png';
 import demo from '../../assets/demozoom.png';
 import portal from '../../assets/portal.png';
+import dungeon from '../../assets/dungeon.png';
+import pictagram from '../../assets/pictathumb.png';
 import { Link } from 'react-router-dom';
 
 class Projects extends React.Component {
@@ -21,7 +23,9 @@ class Projects extends React.Component {
       tiles: tiles,
       redroute: redroute,
       demo: demo,
-      portal: portal
+      portal: portal,
+      pictagram: pictagram,
+      dungeon: dungeon
     };
   }
 

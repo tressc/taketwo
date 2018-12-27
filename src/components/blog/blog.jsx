@@ -1,8 +1,8 @@
 import React from 'react';
 import Navigation from '../nav/navigation.jsx';
 import * as Scroll from 'react-scroll';
-import P5Wrapper from '../p5wrapper.jsx';
-import sketch from './sketch.js';
+// import P5Wrapper from '../p5wrapper.jsx';
+// import sketch from './sketch.js';
 // import Dec172018 from './posts/12172018.jsx';
 // import ReactHtmlParser from 'react-html-parser';
 
@@ -35,19 +35,14 @@ class Blog extends React.Component {
   render() {
     let links = this.props.blogs.map((post, i) => {
       let offset = -50;
-      let text = String(post.date);
-      // shouldn't need this if all dates are same format!
-      if (text.length > 7) {
-        text = text.slice(0, 7) + '...';
-      }
       if (i === 0) {
         return (
-          <span className="blog-link" key={ i } onClick={this.scrollToTop()}>{ text }</span>
+          <span className="blog-link" key={ i } onClick={this.scrollToTop()}>{ post.date }</span>
         )
       }
       return (
         <Link className="blog-link" key={ i } activeClass="active" to={ String(post.date) } spy={true} smooth={true} offset={ offset } duration={500}>
-          { text }
+          { post.date }
         </Link>
       );
     })
@@ -60,6 +55,7 @@ class Blog extends React.Component {
       return (
         <Element key={ i } className={ className } name={ String(post.date)}>
           <h2>{ post.title }</h2>
+          <h4> {post.date }</h4>
           <div dangerouslySetInnerHTML={{__html: post.body }}></div>
         </Element>
         );
@@ -72,12 +68,10 @@ class Blog extends React.Component {
               <div>
                 { links }
               </div>
-              <span className="blog-link" onClick={this.scrollToTop(1500)}>To the top!</span>
             </div>
             <div className="entries">
               <div className="posts">
                 { posts }
-                <P5Wrapper sketch={ sketch }></P5Wrapper>
               </div>
             </div>
           </div>

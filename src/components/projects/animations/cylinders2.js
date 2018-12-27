@@ -20,6 +20,7 @@ export default function sketch (p) {
     var inBoundsY = p.mouseY < 500 && p.mouseY > 0;
 
     if (p.mouseIsPressed && inBoundsX && inBoundsY) {
+    // if (p.mouseIsPressed) {
       currentRotationY = (p.mouseX - p.width / 2) / (p.width / 2);
       currentRotationX = (p.mouseY - p.height / 2) / (p.width / 2);
     }

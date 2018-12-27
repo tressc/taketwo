@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '../nav/navigation.jsx';
-import portrait from '../../assets/me.jpeg';
+import portrait from '../../assets/meline.png';
 
 class About extends  React.Component {
   constructor() {

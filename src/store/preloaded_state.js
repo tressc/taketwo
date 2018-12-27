@@ -73,27 +73,68 @@ const preloadedState = {
   ],
   blogs: [
     {
-      date: 234234,
-      title: 'sometitle',
+      date: "12-21-2018",
+      title: 'Trees, Trees, Trees',
       body: `
-      some multiline string <br/>
-      that <i>contains</i> HTML
+      <br />
+      When beginning to think about a game AI, a naive first approach often involves some sort of tree. We can imagine each node in the tree represent some future game state. For instance, in a game of tic-tac-toe the board might look like this on X's turn. X has three available moves, which would result in different board states, so we could illustrate this as a tree.
+      <br />
+      <br />
+      *image*
+      <br />
+      <br />
+      To extend the tree, we can add O's possible responses to each of these new board states. Eventually we hit a dead end: board states in which the game is over and there will be no additional moves. These states form the leaves of our tree.
+      <br />
+      <br />
+      *image*
+      <br />
+      <br />
+      A simple tic-tac-toe AI would search this tree and pick moves (sub-trees) which terminate in the most number of leaves where it wins the game and the fewest in which it loses or ties.
+      <br />
+      <br />
+      *image*
+      <br />
+      <br />
+      Great! But even for a simple game like tic-tac-toe, the full tree looks like this. That's x^y nodes. For go it's a^b. That's too big to search exhaustively. So what are some ways of reducing the size of the tree, while still getting the same result?
+
+      A few things come to mind. First, we have a lot of repeats or overlapping sub-trees. We know that if we see the same board state in two different nodes, that all subsequent nodes within each of those sub-trees will also be identical. If we want to calculate the number of winning leaves that can be reached from a given node, we can store this value in a dictionary. This way, for each node we encounter, we first check if the value of its board state has already been calculated and stored. If it has, we don't need to traverse its subtree.
+      <br />
+      <br />
+      *image*
+      <br />
+      <br />
+      A second strategy accounts for symmetry. In our first tree, we assumed that there are nine possible first moves in tic-tac-toe. Accounting for symmetry, there are actually only 3!
+      <br />
+      <br />
+      *image*
+      <br />
+      <br />
+      If we can identify an inexpensive way to determine rotational symmetry, we can eliminate nodes (and more importantly their sub-trees) which are symmetrically equivalent. This 'if' is important. A naive way of checking for rotational symmetry between two boards is rotating one board 0, 90, 180, and 270 degrees. If at any of these rotations both boards are the same, they are rotationally symmetrical symmetrical.
+      <br />
+      <br />
+      *image*
+      <br />
+      <br />
+      A common strategy is to use something called alpha-beta pruning, but that deserves its own post.
+
       `
     },
     {
-      date: 34534545,
-      title: 'sometitle',
+      date: "12-19-2018",
+      title: 'Introduction',
       body: `
-      some multiline string <br/>
-      that <i>contains</i> HTML
-      `
-    },
-    {
-      date: 234256345645634,
-      title: 'sometitle',
-      body: `
-      some multiline string <br/>
-      that <i>contains</i> HTML
+      <br/ >
+      When Lee Sedol played AlphaGo in March 2016, I stayed up late each night to watch the livestream from Seoul. I remember desperately wanting him to win, to validate my belief that excellence in go could never be reduced to equations and heuristics. Prior to these games I was convinced that his loss would rob the game of its magic. The mystery of the game would be revealed as nothing more than a feature of human ignorance. Lee lost the match, and this did change the way I understand the game, but not in the way that I thought it would.
+      <br/ >
+      <br/ >
+      I first learned the rules of go in high school, but didn't take it up seriously until some years later, when the game became an obsession for me. While I don't play with much frequency these days, I still find myself idly paging through books on joseki and solving tsumego on the subway. The game still haunts me.
+      <br/ >
+      <br/ >
+      My journey into programming and computer science has been so satisfying because I have begun to understand how so much complexity can be created and derived from simple abstractions. How we can emulate logical operations with wires. How we can perform arithmetic with boolean operations. There's a satisfying determinism to this kind of understanding. But how can you apply these same tools to problems that are messy, where there are too many variables for even the most advanced computer, where intuition might serve better than calculation?
+      <br/ >
+      <br/ >
+      Clearly there are ways to accomplish this, as illustrated by AlphaGo's definitive victory against Lee. Over the course of the following posts, I will explore how the nightmarish problem of building a good go ai can be broken down into smaller manageable problems, and how various approaches can be woven together to form a coherent program.
+
       `
     },
   ]

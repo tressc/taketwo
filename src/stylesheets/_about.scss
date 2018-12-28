@@ -28,6 +28,16 @@
   transition: 0s;
 }
 
+.left .row-one {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.left .row-one div {
+  width: 415px;
+  text-align: right;
+}
+
 .left .row-two, .left .row-three {
   font-weight: 600;
   display: flex;
@@ -53,7 +63,7 @@
 
 .row-two {
   height: 300px;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
 }
 
 .list {
@@ -71,12 +81,17 @@
 }
 
 .contact {
+  margin-top: 0;
   padding: 0;
 }
 
 .contact li {
   list-style: none;
   margin-bottom: 20px;
+}
+
+.email {
+  color: white !important;
 }
 
 .red {

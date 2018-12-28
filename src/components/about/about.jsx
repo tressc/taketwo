@@ -98,7 +98,7 @@ class About extends  React.Component {
 
             <div className="row-three">
               <ul className="contact">
-                <li>treescd@gmail.com</li>
+                <li><a className="email" href="mailto:treescd@gmail.com">treescd@gmail.com</a></li>
                 <li>860.331.0394</li>
               </ul>
             </div>

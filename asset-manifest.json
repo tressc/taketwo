@@ -1,12 +1,12 @@
 {
-  "main.css": "/static/css/main.a682c736.chunk.css",
-  "main.js": "/static/js/main.fa5b3cbc.chunk.js",
-  "main.js.map": "/static/js/main.fa5b3cbc.chunk.js.map",
+  "main.css": "/static/css/main.0f6ec4bf.chunk.css",
+  "main.js": "/static/js/main.10bb7ee3.chunk.js",
+  "main.js.map": "/static/js/main.10bb7ee3.chunk.js.map",
   "static/js/1.92da0b98.chunk.js": "/static/js/1.92da0b98.chunk.js",
   "static/js/1.92da0b98.chunk.js.map": "/static/js/1.92da0b98.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/me.jpeg": "/static/media/me.04182a33.jpeg",
+  "static/media/me.jpeg": "/static/media/me.f789326b.jpeg",
   "static/media/dungeon.png": "/static/media/dungeon.02293b6b.png",
   "static/media/boxes.png": "/static/media/boxes.1908bfdd.png",
   "static/media/tiles.png": "/static/media/tiles.a4b02296.png",
@@ -20,8 +20,8 @@
   "static/media/picta.png": "/static/media/picta.62818ab4.png",
   "static/media/cylinder.png": "/static/media/cylinder.b5bfc620.png",
   "static/media/resume.pdf": "/static/media/resume.ec0781f9.pdf",
-  "static/css/main.a682c736.chunk.css.map": "/static/css/main.a682c736.chunk.css.map",
+  "static/css/main.0f6ec4bf.chunk.css.map": "/static/css/main.0f6ec4bf.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.84742ab9f48dc96857928b58c60e5a83.js": "/precache-manifest.84742ab9f48dc96857928b58c60e5a83.js",
+  "precache-manifest.3354d937dcb98af2787770f7a0c2312d.js": "/precache-manifest.3354d937dcb98af2787770f7a0c2312d.js",
   "service-worker.js": "/service-worker.js"
 }

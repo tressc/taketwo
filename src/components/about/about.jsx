@@ -72,7 +72,7 @@ class About extends  React.Component {
           <div className="left">
             <div className="row-one">
               <div>
-                I'm Colin, a NYC-based software developer. You can download my resume <a href={ resume } download>here</a>.
+                Hi! I'm Colin, a NYC-based software developer. You can download my resume <a href={ resume } download>here</a>.
               </div>
             </div>
 

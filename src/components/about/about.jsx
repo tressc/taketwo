@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from '../nav/navigation.jsx';
 import portrait from '../../assets/me.jpeg';
 import resume from '../../assets/resume.pdf';
+import { Link } from 'react-router-dom';
 
 class About extends  React.Component {
   constructor() {
@@ -72,7 +73,9 @@ class About extends  React.Component {
           <div className="left">
             <div className="row-one">
               <div>
-                Hi! I'm Colin, a NYC-based software developer. You can download my resume <a href={ resume } download>here</a>.
+                Hi! I'm Colin, a NYC-based software developer. You can check out my resume <a href={ resume } target="_blank">here</a>.
+                <div className="space"/>
+                View my <Link to="/projects" href="/projects">projects</Link>.
               </div>
             </div>
 

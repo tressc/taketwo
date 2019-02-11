@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Switch>
-          <Route exact path="/" render={(props) => { return <Redirect to="/projects" /> }} />
+          <Route exact path="/" render={(props) => { return <Redirect to="/about" /> }} />
           <Route exact path="/projects" component={ Projects } />
           <Route exact path={`/projects/:id`} component={ Project } />
           <Route exact path="/blog" component={ Blog } />

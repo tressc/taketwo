@@ -17,8 +17,8 @@
 
 .about .sub-nav a {
   font-size: 25px;
-  color: black;
-  // font-weight: 600;
+  color: #919191;
+  font-weight: 600;
   text-decoration: none;
   transition: 2s;
 }
@@ -26,6 +26,10 @@
 .about .sub-nav a:hover {
   color: white;
   transition: 0s;
+}
+
+.about .space {
+  height: 50px;
 }
 
 .left .row-one {

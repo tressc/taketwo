@@ -12,7 +12,7 @@ class Navigation extends React.Component {
     return (
       <Navbar fluid className="navigation">
         <Navbar.Header>
-          <Link to="/projects" href="/projects" className="logo">
+          <Link to="/about" href="/about" className="logo">
             <span>t</span>
           </Link>
         </Navbar.Header>

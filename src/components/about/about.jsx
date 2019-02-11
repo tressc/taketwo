@@ -86,6 +86,10 @@ class About extends  React.Component {
             <div className="row-three">
               Contact
             </div>
+
+            <div className="row-four">
+              External
+            </div>
           </div>
 
           <div className="right">
@@ -103,6 +107,14 @@ class About extends  React.Component {
               <ul className="contact">
                 <li><a className="email" href="mailto:treescd@gmail.com">treescd@gmail.com</a></li>
                 <li>860.331.0394</li>
+              </ul>
+            </div>
+
+
+            <div className="row-four">
+              <ul className="contact">
+                <li><a className="email" href="https://github.com/tressc">Github</a></li>
+                <li><a className="email" href="https://www.linkedin.com/in/tressc/">LinkedIn</a></li>
               </ul>
             </div>
           </div>

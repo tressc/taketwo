@@ -17,7 +17,7 @@
 
 .about .sub-nav a {
   font-size: 25px;
-  color: #919191;
+  color: #28d0ff;
   font-weight: 600;
   text-decoration: none;
   transition: 2s;
@@ -42,7 +42,7 @@
   text-align: right;
 }
 
-.left .row-two, .left .row-three {
+.left .row-two, .left .row-three, .left .row-four {
   font-weight: 600;
   display: flex;
   justify-content: flex-end;
@@ -70,6 +70,16 @@
   // margin-bottom: 100px;
 }
 
+.left .row-three {
+  margin-bottom: 100px;
+  // margin-bottom: 100px;
+}
+
+.right .row-three {
+  margin-bottom: 50px;
+  // margin-bottom: 100px;
+}
+
 .list {
   width: 40%;
   display: grid;
@@ -94,9 +104,9 @@
   margin-bottom: 20px;
 }
 
-.email {
-  color: white !important;
-}
+// .email {
+//   color: white !important;
+// }
 
 .red {
   color: red;
